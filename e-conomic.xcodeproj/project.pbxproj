@@ -17,6 +17,10 @@
 		E671E79A2C4FE3A60011075D /* e_conomicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7992C4FE3A60011075D /* e_conomicTests.swift */; };
 		E671E7A42C4FE3A60011075D /* e_conomicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7A32C4FE3A60011075D /* e_conomicUITests.swift */; };
 		E671E7A62C4FE3A60011075D /* e_conomicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7A52C4FE3A60011075D /* e_conomicUITestsLaunchTests.swift */; };
+		E671E7B32C4FE6770011075D /* ReceiptsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7B22C4FE6770011075D /* ReceiptsTableViewController.swift */; };
+		E671E7B52C4FE6A40011075D /* ReceiptsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7B42C4FE6A40011075D /* ReceiptsDetailsViewController.swift */; };
+		E671E7BA2C4FE86A0011075D /* ReceiptsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7B92C4FE86A0011075D /* ReceiptsViewModel.swift */; };
+		E671E7BC2C4FE8940011075D /* ReceiptDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7BB2C4FE8940011075D /* ReceiptDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		E671E79F2C4FE3A60011075D /* e-conomicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "e-conomicUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E671E7A32C4FE3A60011075D /* e_conomicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_conomicUITests.swift; sourceTree = "<group>"; };
 		E671E7A52C4FE3A60011075D /* e_conomicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = e_conomicUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E671E7B22C4FE6770011075D /* ReceiptsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsTableViewController.swift; sourceTree = "<group>"; };
+		E671E7B42C4FE6A40011075D /* ReceiptsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsDetailsViewController.swift; sourceTree = "<group>"; };
+		E671E7B92C4FE86A0011075D /* ReceiptsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptsViewModel.swift; sourceTree = "<group>"; };
+		E671E7BB2C4FE8940011075D /* ReceiptDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,9 @@
 				E671E77F2C4FE3A50011075D /* AppDelegate.swift */,
 				E671E7812C4FE3A50011075D /* SceneDelegate.swift */,
 				E671E7832C4FE3A50011075D /* ViewController.swift */,
+				E671E7B82C4FE82D0011075D /* ViewModels */,
+				E671E7B72C4FE7C40011075D /* DataManager */,
+				E671E7B62C4FE7360011075D /* ViewControllers */,
 				E671E7852C4FE3A50011075D /* Main.storyboard */,
 				E671E78B2C4FE3A60011075D /* Assets.xcassets */,
 				E671E78D2C4FE3A60011075D /* LaunchScreen.storyboard */,
@@ -128,6 +139,31 @@
 				E671E7A52C4FE3A60011075D /* e_conomicUITestsLaunchTests.swift */,
 			);
 			path = "e-conomicUITests";
+			sourceTree = "<group>";
+		};
+		E671E7B62C4FE7360011075D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E671E7B42C4FE6A40011075D /* ReceiptsDetailsViewController.swift */,
+				E671E7B22C4FE6770011075D /* ReceiptsTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E671E7B72C4FE7C40011075D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		E671E7B82C4FE82D0011075D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E671E7B92C4FE86A0011075D /* ReceiptsViewModel.swift */,
+				E671E7BB2C4FE8940011075D /* ReceiptDetailViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +297,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E671E7B52C4FE6A40011075D /* ReceiptsDetailsViewController.swift in Sources */,
+				E671E7B32C4FE6770011075D /* ReceiptsTableViewController.swift in Sources */,
+				E671E7BC2C4FE8940011075D /* ReceiptDetailViewModel.swift in Sources */,
 				E671E7842C4FE3A50011075D /* ViewController.swift in Sources */,
 				E671E7802C4FE3A50011075D /* AppDelegate.swift in Sources */,
+				E671E7BA2C4FE86A0011075D /* ReceiptsViewModel.swift in Sources */,
 				E671E78A2C4FE3A50011075D /* e_conomic.xcdatamodeld in Sources */,
 				E671E7822C4FE3A50011075D /* SceneDelegate.swift in Sources */,
 			);
