@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E661BB442C50212200100862 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E661BB432C50212200100862 /* DataManager.swift */; };
+		E661BB452C50212200100862 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E661BB432C50212200100862 /* DataManager.swift */; };
 		E671E7802C4FE3A50011075D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E77F2C4FE3A50011075D /* AppDelegate.swift */; };
 		E671E7822C4FE3A50011075D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7812C4FE3A50011075D /* SceneDelegate.swift */; };
-		E671E7842C4FE3A50011075D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E7832C4FE3A50011075D /* ViewController.swift */; };
 		E671E7872C4FE3A50011075D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E671E7862C4FE3A50011075D /* Base */; };
 		E671E78A2C4FE3A50011075D /* e_conomic.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E671E7882C4FE3A50011075D /* e_conomic.xcdatamodeld */; };
 		E671E78C2C4FE3A60011075D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E671E78B2C4FE3A60011075D /* Assets.xcassets */; };
@@ -41,10 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E661BB432C50212200100862 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E671E77C2C4FE3A50011075D /* e-conomic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-conomic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E671E77F2C4FE3A50011075D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E671E7812C4FE3A50011075D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E671E7832C4FE3A50011075D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E671E7862C4FE3A50011075D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E671E7892C4FE3A50011075D /* e_conomic.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = e_conomic.xcdatamodel; sourceTree = "<group>"; };
 		E671E78B2C4FE3A60011075D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 			children = (
 				E671E77F2C4FE3A50011075D /* AppDelegate.swift */,
 				E671E7812C4FE3A50011075D /* SceneDelegate.swift */,
-				E671E7832C4FE3A50011075D /* ViewController.swift */,
 				E671E7B82C4FE82D0011075D /* ViewModels */,
 				E671E7B72C4FE7C40011075D /* DataManager */,
 				E671E7B62C4FE7360011075D /* ViewControllers */,
@@ -153,6 +153,7 @@
 		E671E7B72C4FE7C40011075D /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				E661BB432C50212200100862 /* DataManager.swift */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -298,9 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E671E7B52C4FE6A40011075D /* ReceiptsDetailsViewController.swift in Sources */,
+				E661BB442C50212200100862 /* DataManager.swift in Sources */,
 				E671E7B32C4FE6770011075D /* ReceiptsTableViewController.swift in Sources */,
 				E671E7BC2C4FE8940011075D /* ReceiptDetailViewModel.swift in Sources */,
-				E671E7842C4FE3A50011075D /* ViewController.swift in Sources */,
 				E671E7802C4FE3A50011075D /* AppDelegate.swift in Sources */,
 				E671E7BA2C4FE86A0011075D /* ReceiptsViewModel.swift in Sources */,
 				E671E78A2C4FE3A50011075D /* e_conomic.xcdatamodeld in Sources */,
@@ -313,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E671E79A2C4FE3A60011075D /* e_conomicTests.swift in Sources */,
+				E661BB452C50212200100862 /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M57C53K8BL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "e-conomic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -513,6 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M57C53K8BL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "e-conomic/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -8,6 +8,8 @@
 import UIKit
 
 class ReceiptsTableViewController: UITableViewController {
+    
+    let dataManager: DataManager = DataManager.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,5 +87,15 @@ class ReceiptsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func addNewReceipt() {
+        let newReceiptVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "receptsDetails") as! ReceiptsDetailsViewController
+        let newReceiptVM = ReceiptDetailViewModel()
+        newReceiptVM.isNewData = true
+        newReceiptVC.viewModel = newReceiptVM
+        newReceiptVC.dataManager = self.dataManager
+        self.navigationController?.pushViewController(newReceiptVC, animated: true)
+    }
 
 }
+

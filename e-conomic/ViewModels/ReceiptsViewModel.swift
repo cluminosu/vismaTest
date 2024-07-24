@@ -8,5 +8,9 @@
 import UIKit
 
 class ReceiptsViewModel: NSObject {
-
+    var allReceipts: [ReceiptDetailViewModel]? = nil
+    
+    override init() {
+        // get from data manager
+    }
 }
