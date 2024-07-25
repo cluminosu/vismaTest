@@ -44,6 +44,7 @@ class ReceiptsDetailsViewController: UIViewController, UIImagePickerControllerDe
             let dateString = formatter.string(from:self.viewModel?.date ?? Date())
             self.dateTextField?.text = dateString
             self.date = (self.viewModel?.date)!
+            self.receiptImageView?.image = self.viewModel?.receiptImage
         }
     }
     
@@ -84,14 +85,14 @@ class ReceiptsDetailsViewController: UIViewController, UIImagePickerControllerDe
     private func saveImageToDocuments() -> String {
         guard let image = self.receiptImageView?.image else { return "" }
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        if let filePath = paths.first?.appendingPathComponent("\(UUID())") {
+        if let filePath = paths.first?.appendingPathComponent("\(UUID()).png") {
             // Save image.
             do {
                try image.pngData()?.write(to: filePath, options: .atomic)
             } catch let error as NSError {
                 print("Could not save image. \(error), \(error.userInfo)")
             }
-            return filePath.absoluteString
+            return filePath.lastPathComponent
         }
 
         return ""

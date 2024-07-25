@@ -14,4 +14,11 @@ class ReceiptDetailViewModel: NSObject {
     var info: String? = nil
     var currency: String? = nil
     var date: Date? = nil
+    var stringDate: String {
+        let formatter = DateFormatter()
+        //2016-12-08 03:37:22 +0000
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
+        return formatter.string(from: self.date ?? Date.distantPast)
+    }
+    
 }

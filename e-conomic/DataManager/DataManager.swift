@@ -13,7 +13,10 @@ class DataManager: NSObject {
     private override init() { }
 
     func getAllReceipts() -> [Receipt] {
-        return []
+        guard let managedContext = self.getContext() else { return [] }
+        let request = NSFetchRequest<Receipt>(entityName: "Receipt")
+        let allReceipts = (try? managedContext.fetch(request)) ?? []
+        return allReceipts
     }
     
     func addNewReceipt(data: String, date: Date, amount: Int, currecy: String, imageLocation: String) {
@@ -22,6 +25,7 @@ class DataManager: NSObject {
         newReceipt.total = Int64(amount)
         newReceipt.info = data
         newReceipt.date = date
+        newReceipt.currency = currecy
         newReceipt.imageURL = imageLocation
         do {
             try managedContext.save()
