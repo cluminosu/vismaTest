@@ -51,6 +51,7 @@ class ReceiptsTableViewController: UITableViewController {
        
         let newReceiptVM = ReceiptDetailViewModel()
         newReceiptVM.isNewData = true
+        newReceiptVM.dataManager = DataManager.shared
         self.showReceiptDetailView(viewModel: newReceiptVM)
     }
     

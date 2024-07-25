@@ -49,6 +49,7 @@ class ReceiptsDetailsViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func addNewImage() {
+        guard self.receiptImageView?.image == nil else { return }
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.allowsEditing = true
@@ -71,14 +72,20 @@ class ReceiptsDetailsViewController: UIViewController, UIImagePickerControllerDe
         guard self.receiptImageView?.image != nil &&
         self.infoTextField?.text != nil &&
         self.amountTextField?.text != nil else { return }
+        var imageURL = self.viewModel?.imageLocation
+        if self.viewModel!.isNewData == true {
+             imageURL = self.saveImageToDocuments()
+        }
+        imageURL = self.saveImageToDocuments()
+        let amountInteger = Int64(self.amountTextField!.text!)
         
-        let imageURL = self.saveImageToDocuments()
-        let amountInteger = Int(self.amountTextField!.text!)
-        self.dataManager?.addNewReceipt(data: self.infoTextField?.text ?? "",
-                                        date: self.date!,
-                                        amount: amountInteger ?? 0,
-                                        currecy: self.currencyTextField?.text ?? "",
-                                        imageLocation: imageURL)
+        self.viewModel?.info = self.infoTextField?.text ?? ""
+        self.viewModel?.date = self.date!
+        self.viewModel?.currency = self.currencyTextField?.text ?? ""
+        self.viewModel?.amount = amountInteger
+        self.viewModel?.imageLocation = imageURL
+        self.viewModel?.saveReceipt()
+        
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -94,8 +101,14 @@ class ReceiptsDetailsViewController: UIViewController, UIImagePickerControllerDe
             }
             return filePath.lastPathComponent
         }
-
         return ""
+    }
+    
+    @IBAction func showHistory() {
+        let historyVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "hisVC") as! HistoryTableViewController
+        let vm = self.viewModel?.getHistory()
+        historyVC.viewModel = vm
+        self.navigationController?.pushViewController(historyVC, animated: true)
     }
 }
 

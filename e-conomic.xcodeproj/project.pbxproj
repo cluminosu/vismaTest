@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6618A222C5284150029FAD5 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6618A212C5284150029FAD5 /* HistoryTableViewController.swift */; };
 		E661BB442C50212200100862 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E661BB432C50212200100862 /* DataManager.swift */; };
 		E661BB452C50212200100862 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E661BB432C50212200100862 /* DataManager.swift */; };
 		E671E7802C4FE3A50011075D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E671E77F2C4FE3A50011075D /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6618A212C5284150029FAD5 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		E661BB432C50212200100862 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E671E77C2C4FE3A50011075D /* e-conomic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-conomic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E671E77F2C4FE3A50011075D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				E671E7B42C4FE6A40011075D /* ReceiptsDetailsViewController.swift */,
 				E671E7B22C4FE6770011075D /* ReceiptsTableViewController.swift */,
+				E6618A212C5284150029FAD5 /* HistoryTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				E671E7B32C4FE6770011075D /* ReceiptsTableViewController.swift in Sources */,
 				E671E7BC2C4FE8940011075D /* ReceiptDetailViewModel.swift in Sources */,
 				E671E7802C4FE3A50011075D /* AppDelegate.swift in Sources */,
+				E6618A222C5284150029FAD5 /* HistoryTableViewController.swift in Sources */,
 				E671E7BA2C4FE86A0011075D /* ReceiptsViewModel.swift in Sources */,
 				E671E78A2C4FE3A50011075D /* e_conomic.xcdatamodeld in Sources */,
 				E671E7822C4FE3A50011075D /* SceneDelegate.swift in Sources */,
